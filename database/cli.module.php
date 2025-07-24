@@ -16,7 +16,7 @@
  * and general SQL query execution.
  */
 
-define(__DATABASE_SOURCE__,"example.sqllite");
+define('__DATABASE_SOURCE__',"example.sqllite");
 
 class SQLiteManager
 {
