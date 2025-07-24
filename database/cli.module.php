@@ -1,4 +1,12 @@
 <?php
+// cli.module.php
+
+#   TITLE   : sqllite-database-manager    
+#   DESC    : This manages The Defined SQL Database using the command line program 
+#   PROPRIETOR: VARSITYMARKET_TECHNOLOGIES
+#   VERSION : 1.0.1.1
+#   AUTHOR  : HARDY HASTINGS  
+#   RELEASE : 2025/06/29
 
 /**
  * SQLiteManager Class
@@ -7,6 +15,9 @@
  * from a PHP CLI application. It handles database creation, table creation,
  * and general SQL query execution.
  */
+
+define(__DATABASE_SOURCE__,"example.sqllite");
+
 class SQLiteManager
 {
     private PDO $pdo; // PDO object for database connection
@@ -158,7 +169,7 @@ class SQLiteManager
 // --- CLI Application Logic ---
 
 // Create an instance of the SQLiteManager
-$manager = new SQLiteManager('examples.sqlite');
+$manager = new SQLiteManager(__DATABASE_SOURCE__);
 $manager->showHelp(); // Show initial help message
 
 // Start the CLI interaction loop
